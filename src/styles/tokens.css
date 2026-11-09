@@ -1,0 +1,87 @@
+/* ─────────────────────────────────────────────────────────────
+   COSMOS design tokens
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* Palette (fixed brand colours) */
+  --c-bg: #050713;
+  --c-bg-2: #0b1020;
+  --c-accent: #72cfff;
+  --c-accent-2: #9a83ff;
+  --c-text: #f4f6ff;
+  --c-text-2: #a5aec4;
+  --c-border: #252d43;
+
+  /* Derived tones */
+  --c-bg-3: #111830;
+  --c-panel: rgba(11, 16, 32, 0.78);
+  --c-panel-solid: #0b1020;
+  --c-panel-strong: rgba(8, 11, 24, 0.92);
+  --c-border-strong: #343e5c;
+  --c-text-3: #6f7891;
+  --c-accent-soft: rgba(114, 207, 255, 0.12);
+  --c-accent-2-soft: rgba(154, 131, 255, 0.14);
+  --c-success: #6fe3b4;
+  --c-danger: #ff7a8a;
+  --c-warning: #ffcf7a;
+
+  /* Typography */
+  --font-display: 'Unbounded Variable', 'Unbounded', 'Inter Variable', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem);
+  --fs-3xl: clamp(2rem, 1.3rem + 2.6vw, 3.4rem);
+  --fs-hero: clamp(2.6rem, 1rem + 6.4vw, 7rem);
+
+  /* Spacing scale (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Elevation & effects */
+  --shadow-panel: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+  --glow-accent: 0 0 0 1px rgba(114, 207, 255, 0.35), 0 0 24px -6px rgba(114, 207, 255, 0.45);
+  --blur-panel: blur(14px) saturate(120%);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-med: 260ms;
+  --dur-slow: 520ms;
+
+  /* Layout */
+  --nav-h: 68px;
+  --container: 1240px;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  color-scheme: dark;
+}
+
+/* Reduced-effects mode: set by the app (preference or prefers-reduced-motion) */
+:root[data-effects='reduced'] {
+  --dur-fast: 0ms;
+  --dur-med: 0ms;
+  --dur-slow: 0ms;
+  --blur-panel: none;
+  --c-panel: rgba(11, 16, 32, 0.96);
+}

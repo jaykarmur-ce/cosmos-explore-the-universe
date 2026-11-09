@@ -1,0 +1,365 @@
+/**
+ * Milestones in space exploration, in chronological order.
+ *
+ * status: 'completed' — the event happened on the given date (UTC unless noted).
+ *         'planned'   — a future target published by the responsible agency;
+ *                       dates can and do slip.
+ * kind:   used to pick an icon (satellite, crewed, robotic, telescope, lander,
+ *         station, flyby, defense).
+ */
+export const TIMELINE = [
+  {
+    id: 'sputnik-1',
+    date: '1957-10-04',
+    title: 'The first artificial satellite',
+    mission: 'Sputnik 1',
+    agency: 'USSR',
+    kind: 'satellite',
+    status: 'completed',
+    summary: 'A 58 cm metal sphere begins the Space Age with a simple radio beep.',
+    details:
+      'Sputnik 1 orbited Earth every 96 minutes and transmitted radio pulses that amateur operators around the world could hear. Its batteries ran out after about three weeks, and it re-entered the atmosphere in January 1958. The launch triggered the Space Race between the Soviet Union and the United States.',
+  },
+  {
+    id: 'explorer-1',
+    date: '1958-01-31',
+    title: 'America’s first satellite',
+    mission: 'Explorer 1',
+    agency: 'USA (JPL / Army)',
+    kind: 'satellite',
+    status: 'completed',
+    summary: 'The first US satellite makes the first major scientific discovery of the Space Age.',
+    details:
+      'Explorer 1 carried a cosmic-ray detector designed by James Van Allen. Its readings revealed belts of charged particles trapped by Earth’s magnetic field — now called the Van Allen radiation belts. (Launch was on 31 January local time in Florida.)',
+  },
+  {
+    id: 'vostok-1',
+    date: '1961-04-12',
+    title: 'First human in space',
+    mission: 'Vostok 1',
+    agency: 'USSR',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'Yuri Gagarin completes a single orbit of Earth in 108 minutes.',
+    details:
+      'Gagarin’s flight lasted about 108 minutes from launch to landing. He ejected from the capsule during descent and parachuted to the ground separately, as planned. April 12 is now celebrated internationally as the International Day of Human Space Flight.',
+  },
+  {
+    id: 'vostok-6',
+    date: '1963-06-16',
+    title: 'First woman in space',
+    mission: 'Vostok 6',
+    agency: 'USSR',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'Valentina Tereshkova orbits Earth 48 times over nearly three days.',
+    details:
+      'Tereshkova, a textile worker and amateur parachutist before joining the cosmonaut corps, spent almost three days in orbit — more flight time than all US astronauts up to that point combined. It would be nearly twenty years before another woman flew in space.',
+  },
+  {
+    id: 'voskhod-2',
+    date: '1965-03-18',
+    title: 'First spacewalk',
+    mission: 'Voskhod 2',
+    agency: 'USSR',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'Alexei Leonov floats outside his spacecraft for about 12 minutes.',
+    details:
+      'Leonov’s spacesuit ballooned in the vacuum, making it almost impossible to re-enter the airlock. He had to release air from his suit — risking decompression sickness — to squeeze back inside.',
+  },
+  {
+    id: 'luna-9',
+    date: '1966-02-03',
+    title: 'First soft landing on the Moon',
+    mission: 'Luna 9',
+    agency: 'USSR',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'A robotic lander proves the lunar surface can support a spacecraft.',
+    details:
+      'Luna 9 transmitted the first photographs taken from the surface of another world. Its success showed that the Moon’s surface was firm enough to land on, rather than covered in deep dust as some had feared.',
+  },
+  {
+    id: 'apollo-8',
+    date: '1968-12-24',
+    title: 'First humans to orbit the Moon',
+    mission: 'Apollo 8',
+    agency: 'NASA',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'Three astronauts circle the Moon and photograph “Earthrise”.',
+    details:
+      'Frank Borman, Jim Lovell and Bill Anders launched on 21 December 1968 and entered lunar orbit on Christmas Eve, completing ten orbits. Anders’ “Earthrise” photograph, showing Earth rising above the lunar horizon, became one of the most influential images ever taken.',
+  },
+  {
+    id: 'apollo-11',
+    date: '1969-07-20',
+    title: 'First humans on the Moon',
+    mission: 'Apollo 11',
+    agency: 'NASA',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'Neil Armstrong and Buzz Aldrin walk on the Sea of Tranquillity.',
+    details:
+      'The lunar module Eagle landed on 20 July 1969 while Michael Collins orbited above in the command module Columbia. Armstrong and Aldrin spent about two and a half hours outside, collecting 21.5 kg of samples and deploying experiments. Six Apollo missions landed twelve astronauts on the Moon between 1969 and 1972.',
+  },
+  {
+    id: 'venera-7',
+    date: '1970-12-15',
+    title: 'First data from another planet’s surface',
+    mission: 'Venera 7',
+    agency: 'USSR',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'A probe survives the descent to Venus and transmits from the surface.',
+    details:
+      'Venera 7 sent back about 23 minutes of weak signals from the surface of Venus, reporting temperatures near 475 °C. It was the first spacecraft to transmit data from the surface of another planet.',
+  },
+  {
+    id: 'salyut-1',
+    date: '1971-04-19',
+    title: 'First space station',
+    mission: 'Salyut 1',
+    agency: 'USSR',
+    kind: 'station',
+    status: 'completed',
+    summary: 'The first crewed orbital laboratory is launched.',
+    details:
+      'Salyut 1 hosted the three-person Soyuz 11 crew for 23 days in June 1971. Tragically, the cosmonauts died during their return when their capsule depressurised — a loss that led to major changes in spacecraft safety, including pressure suits during launch and re-entry.',
+  },
+  {
+    id: 'viking-1',
+    date: '1976-07-20',
+    title: 'First long-lived Mars lander',
+    mission: 'Viking 1',
+    agency: 'NASA',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'Viking 1 lands on Chryse Planitia and returns the first photos from the Martian surface.',
+    details:
+      'Viking 1 operated on Mars for more than six years, and with its twin Viking 2 carried the first experiments designed to look for signs of life on another planet. The Soviet Mars 3 lander had touched down in 1971 but fell silent within seconds.',
+  },
+  {
+    id: 'voyager',
+    date: '1977-09-05',
+    title: 'The Voyagers depart',
+    mission: 'Voyager 1 & 2',
+    agency: 'NASA',
+    kind: 'flyby',
+    status: 'completed',
+    summary: 'Twin probes begin a grand tour of the outer planets.',
+    details:
+      'Voyager 2 launched on 20 August 1977 and Voyager 1 on 5 September. Together they explored Jupiter and Saturn, and Voyager 2 went on to become the only spacecraft to visit Uranus (1986) and Neptune (1989). Each carries a Golden Record of sounds and images from Earth.',
+  },
+  {
+    id: 'sts-1',
+    date: '1981-04-12',
+    title: 'First Space Shuttle flight',
+    mission: 'STS-1 Columbia',
+    agency: 'NASA',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'The first reusable crewed spacecraft flies, twenty years to the day after Gagarin.',
+    details:
+      'John Young and Robert Crippen flew Columbia for 37 orbits before landing like an aircraft at Edwards Air Force Base. The Shuttle fleet flew 135 missions until 2011, launching satellites, servicing Hubble and assembling the International Space Station.',
+  },
+  {
+    id: 'hubble',
+    date: '1990-04-24',
+    title: 'Hubble Space Telescope launches',
+    mission: 'STS-31 / Hubble',
+    agency: 'NASA / ESA',
+    kind: 'telescope',
+    status: 'completed',
+    summary: 'A telescope above the atmosphere transforms our view of the universe.',
+    details:
+      'Hubble was deployed on 25 April 1990. A flaw in its main mirror blurred early images until astronauts installed corrective optics in 1993. Since then it has helped measure the expansion rate of the universe and imaged galaxies billions of light-years away.',
+  },
+  {
+    id: 'iss',
+    date: '1998-11-20',
+    title: 'International Space Station construction begins',
+    mission: 'ISS — Zarya module',
+    agency: 'NASA / Roscosmos / ESA / JAXA / CSA',
+    kind: 'station',
+    status: 'completed',
+    summary: 'The first module of the largest structure ever assembled in space reaches orbit.',
+    details:
+      'The ISS has been continuously occupied since the Expedition 1 crew arrived on 2 November 2000. Built and operated by five space agencies, it orbits Earth about every 90 minutes and has hosted astronauts from more than 20 countries.',
+  },
+  {
+    id: 'mer',
+    date: '2004-01-04',
+    title: 'Spirit and Opportunity land on Mars',
+    mission: 'Mars Exploration Rovers',
+    agency: 'NASA',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'Twin rovers designed for 90 days go on to explore for years.',
+    details:
+      'Spirit landed on 4 January 2004 and Opportunity on 25 January. Opportunity kept driving until a global dust storm in 2018 — more than 14 years and over 45 km — and found strong evidence that liquid water once soaked the Martian surface.',
+  },
+  {
+    id: 'cassini',
+    date: '2004-07-01',
+    title: 'Cassini arrives at Saturn',
+    mission: 'Cassini–Huygens',
+    agency: 'NASA / ESA / ASI',
+    kind: 'robotic',
+    status: 'completed',
+    summary: 'A 13-year study of Saturn, its rings and moons begins.',
+    details:
+      'Cassini released the Huygens probe, which landed on Titan in January 2005 — the most distant landing ever achieved. Cassini discovered water-ice plumes erupting from Enceladus before ending its mission with a deliberate plunge into Saturn on 15 September 2017.',
+  },
+  {
+    id: 'curiosity',
+    date: '2012-08-06',
+    title: 'Curiosity lands in Gale Crater',
+    mission: 'Mars Science Laboratory',
+    agency: 'NASA',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'A car-sized rover arrives by “sky crane”.',
+    details:
+      'Curiosity was lowered onto Mars on cables from a rocket-powered descent stage. It found that ancient Gale Crater once held a lake with conditions that could have supported microbial life. (Landing was on 5 August in US Pacific time.)',
+  },
+  {
+    id: 'voyager-1-interstellar',
+    date: '2012-08-25',
+    title: 'Voyager 1 reaches interstellar space',
+    mission: 'Voyager 1',
+    agency: 'NASA',
+    kind: 'flyby',
+    status: 'completed',
+    summary: 'A human-made object leaves the Sun’s heliosphere for the first time.',
+    details:
+      'Voyager 1 crossed the heliopause — the boundary where the solar wind gives way to interstellar material. Voyager 2 followed in November 2018. Both continue to send data from more than 20 billion kilometres away.',
+  },
+  {
+    id: 'philae',
+    date: '2014-11-12',
+    title: 'First landing on a comet',
+    mission: 'Rosetta / Philae',
+    agency: 'ESA',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'The Philae lander touches down on comet 67P/Churyumov–Gerasimenko.',
+    details:
+      'Philae bounced twice before settling in a shadowed spot, but still returned data. Rosetta orbited the comet for two years, studying how it changed as it approached the Sun, before ending its own mission with a controlled descent onto the comet in September 2016.',
+  },
+  {
+    id: 'new-horizons',
+    date: '2015-07-14',
+    title: 'First close look at Pluto',
+    mission: 'New Horizons',
+    agency: 'NASA',
+    kind: 'flyby',
+    status: 'completed',
+    summary: 'A fast flyby reveals mountains of ice and a heart-shaped plain.',
+    details:
+      'After a nine-year journey, New Horizons passed about 12,500 km from Pluto’s surface, revealing nitrogen-ice glaciers and water-ice mountains. In 2019 it flew past Arrokoth, the most distant object ever explored up close.',
+  },
+  {
+    id: 'perseverance',
+    date: '2021-02-18',
+    title: 'Perseverance and Ingenuity',
+    mission: 'Mars 2020',
+    agency: 'NASA',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'A rover lands in Jezero Crater carrying the first Mars helicopter.',
+    details:
+      'Perseverance is collecting rock samples intended for possible future return to Earth. On 19 April 2021 its companion, the Ingenuity helicopter, made the first powered, controlled flight on another planet; it went on to fly 72 times.',
+  },
+  {
+    id: 'jwst',
+    date: '2021-12-25',
+    title: 'James Webb Space Telescope launches',
+    mission: 'JWST',
+    agency: 'NASA / ESA / CSA',
+    kind: 'telescope',
+    status: 'completed',
+    summary: 'The largest space telescope yet heads for a vantage point 1.5 million km from Earth.',
+    details:
+      'Webb observes mainly in infrared light from near the Sun–Earth L2 point. Its 6.5-metre gold-coated mirror unfolded in space. Since its first images in July 2022 it has studied some of the earliest galaxies and the atmospheres of exoplanets.',
+  },
+  {
+    id: 'dart',
+    date: '2022-09-26',
+    title: 'First planetary-defence test',
+    mission: 'DART',
+    agency: 'NASA',
+    kind: 'defense',
+    status: 'completed',
+    summary: 'A spacecraft deliberately strikes an asteroid moonlet — and changes its orbit.',
+    details:
+      'DART collided with Dimorphos, a small moon of the asteroid Didymos, shortening its 11 hour 55 minute orbit by about 32 minutes. It was the first time humanity measurably changed the motion of a celestial body. Neither asteroid posed any threat to Earth.',
+  },
+  {
+    id: 'chandrayaan-3',
+    date: '2023-08-23',
+    title: 'Landing near the lunar south pole',
+    mission: 'Chandrayaan-3',
+    agency: 'ISRO (India)',
+    kind: 'lander',
+    status: 'completed',
+    summary: 'India becomes the first nation to soft-land near the Moon’s south polar region.',
+    details:
+      'The Vikram lander touched down at about 69° south and deployed the Pragyan rover, which confirmed the presence of sulfur in the lunar soil. India became the fourth country to achieve a soft landing on the Moon.',
+  },
+  {
+    id: 'europa-clipper-launch',
+    date: '2024-10-14',
+    title: 'Europa Clipper launches',
+    mission: 'Europa Clipper',
+    agency: 'NASA',
+    kind: 'robotic',
+    status: 'completed',
+    summary: 'NASA’s largest planetary spacecraft sets out to study an ocean moon.',
+    details:
+      'Europa Clipper will investigate whether Jupiter’s moon Europa, with its global ocean beneath an icy crust, has conditions suitable for life. Its solar arrays span about 30 metres to collect sunlight five times farther from the Sun than Earth.',
+  },
+  {
+    id: 'artemis-2',
+    date: '2026-04-01',
+    title: 'Humans return to the Moon’s vicinity',
+    mission: 'Artemis II',
+    agency: 'NASA / CSA',
+    kind: 'crewed',
+    status: 'completed',
+    summary: 'Four astronauts fly around the Moon — the first crewed lunar mission since 1972.',
+    details:
+      'Reid Wiseman, Victor Glover, Christina Koch and the Canadian Space Agency’s Jeremy Hansen launched aboard Orion on 1 April 2026, flew around the Moon and splashed down in the Pacific on 10 April. The flight set a new record for the farthest distance humans have travelled from Earth.',
+  },
+  {
+    id: 'dragonfly',
+    date: '2028-07-01',
+    dateLabel: 'Planned · July 2028',
+    title: 'Dragonfly sets out for Titan',
+    mission: 'Dragonfly',
+    agency: 'NASA',
+    kind: 'robotic',
+    status: 'planned',
+    summary: 'A nuclear-powered rotorcraft is scheduled to launch towards Saturn’s largest moon.',
+    details:
+      'Dragonfly is designed to fly between sites on Titan, studying its organic-rich surface and the chemistry that may precede life. Launch is planned for July 2028, with arrival in the 2030s. Schedules for future missions can change.',
+  },
+  {
+    id: 'europa-clipper-arrival',
+    date: '2030-04-01',
+    dateLabel: 'Planned · April 2030',
+    title: 'Europa Clipper reaches Jupiter',
+    mission: 'Europa Clipper',
+    agency: 'NASA',
+    kind: 'robotic',
+    status: 'planned',
+    summary: 'Arrival at Jupiter is planned, followed by dozens of close flybys of Europa.',
+    details:
+      'After gravity assists from Mars and Earth, Europa Clipper is scheduled to enter orbit around Jupiter in April 2030 and make about 49 flybys of Europa, mapping its ice shell and sampling its environment. Schedules for future missions can change.',
+  },
+];
+
+export function getMilestone(id) {
+  return TIMELINE.find((m) => m.id === id) ?? null;
+}
